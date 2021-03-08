@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="annotations-api">
+    <CLASSES>
+      <root url="jar://D:/IDEA/apache-tomcat-8.5.63/apache-tomcat-8.5.63/lib/annotations-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
