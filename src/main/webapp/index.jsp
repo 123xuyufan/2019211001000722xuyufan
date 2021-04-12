@@ -2,7 +2,7 @@
 
 <%@include file="header.jsp"%>
 <h2>welcome to My online shop Home page</h2>
-<form method="get" target="_blank" action="Search">
+<form method="get" target="_blank" action="search">
     <input type="text" name="txt" size="30/">
     <select name="search">
         <option value="baidu">Baidu</option>
