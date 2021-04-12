@@ -13,6 +13,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="xuyufan2019211001000722" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:8.2.1.jre8" />
+          <element id="library" level="project" name="Maven: org.jetbrains:annotations:20.1.0" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/xuyufan2019211001000722-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
