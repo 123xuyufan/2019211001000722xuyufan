@@ -36,7 +36,7 @@
                 String gender = rs.getString("gender");
                 Date birthdate = rs.getDate("birthdate");
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                out.println("<tr><td>" + id + "</td><td>" + username + "</td><td>" + password1 + "</td><td>" + email + "</td><td>" + gender + "</td><td>" + sdf.format(birthdate) + "</td></tr>");
+                System.out.println("<tr><td>" + id + "</td><td>" + username + "</td><td>" + password1 + "</td><td>" + email + "</td><td>" + gender + "</td><td>" + sdf.format(birthdate) + "</td></tr>");
             }
     }
         //we will get data in next demo - 6.liveDemo #3

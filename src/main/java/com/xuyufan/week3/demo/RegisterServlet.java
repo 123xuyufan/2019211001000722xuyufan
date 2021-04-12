@@ -10,7 +10,7 @@ import java.sql.*;
 
 
 @WebServlet(
-        urlPatterns = {"/Register"}
+        value = "/register"
 )
 
 public class RegisterServlet extends HttpServlet {
@@ -40,11 +40,13 @@ doPost(request,response);
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String Username=request.getParameter("username");
+        String Username=request.getParameter("Username");
         String password=request.getParameter("password");
-        String Email=request.getParameter("email");
-        String Gender=request.getParameter("gender");
-        String Date=request.getParameter("birthDate");
+        String Email=request.getParameter("Email");
+        String Gender=request.getParameter("Gender");
+        String Date=request.getParameter("Date");
+
+        System.out.println(Username+password);
 
         String sql1="insert into usertable values(?,?,?,?,?)";
         PreparedStatement pstmt= null;

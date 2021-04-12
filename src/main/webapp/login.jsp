@@ -9,10 +9,10 @@
 <h1>Login</h1>
 <%
     if(request.getAttribute("message")!=null){
-        System.out.println(request.getAttribute("message"));
+        out.println(request.getAttribute("message"));
     }
 %>
-<form method="post" action="/login">
+<form method="post" action="login">
     <table>
         <tr> <td>Username:</td> <td><input type="text" name="Username" required><br/></td></tr>
         <tr> <td>password:</td> <td><input type="password" name="password" required minlength="8"><br/></td></tr>

@@ -8,7 +8,7 @@
 <%@include file="/header.jsp"%>
 This is my JSP page.<br>
 <h1>New User Registration</h1>
-<form method="post" action="/xuyufan2019211001000722_war_exploded/Register">
+<form method="post" action="register">
     <table>
         <tr> <td>Username:</td> <td><input type="text" name="Username" required><br/></td></tr>
         <tr> <td>password:</td> <td><input type="password" name="password" required minlength="8"><br/></td></tr>
