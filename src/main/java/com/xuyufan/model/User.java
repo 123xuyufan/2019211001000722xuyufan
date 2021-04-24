@@ -7,19 +7,20 @@ public class User {
     private String username;
     private String password;
     private String email;
-    private String gander;
-    private java.util.Date birthDate;
+    private String gender;
+    private java.util.Date birthdate;
 
-    public User() {
+    public User(){
+
     }
 
-    public User(int id, String username, String password, String email, String gander, Date birthDate) {
+    public User(int id, String username, String password, String email, String gender, Date birthdate) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
-        this.gander = gander;
-        this.birthDate = birthDate;
+        this.gender = gender;
+        this.birthdate = birthdate;
     }
 
     public int getId() {
@@ -34,8 +35,8 @@ public class User {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsername(String usernamne) {
+        this.username = usernamne;
     }
 
     public String getPassword() {
@@ -54,20 +55,20 @@ public class User {
         this.email = email;
     }
 
-    public String getGander() {
-        return gander;
+    public String getGender() {
+        return gender;
     }
 
-    public void setGander(String gander) {
-        this.gander = gander;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
+    public Date getBirthdate() {
+        return birthdate;
     }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthDate(Date birthdate) {
+        this.birthdate = birthdate;
     }
 
     @Override
@@ -77,8 +78,8 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", gander='" + gander + '\'' +
-                ", birthDate=" + birthDate +
+                ", gender='" + gender + '\'' +
+                ", birthdate=" + birthdate +
                 '}';
     }
 }
