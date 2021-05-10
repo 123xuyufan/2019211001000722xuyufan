@@ -35,8 +35,7 @@ public class LoginServlet extends HttpServlet {
         try {
             User user=userDao.findByUsernamePassword(con,Username, password);
             if(user!=null){
-
-                String rememberMe=request.getParameter("rememberMe");
+                String rememberMe=request.getParameter("remember");
                 if(rememberMe!=null&&rememberMe.equals("1")){
                     Cookie usernameCookie=new Cookie("cUsername",user.getUsername());
                     Cookie passwordCookie=new Cookie("cPassword",user.getPassword());
@@ -51,10 +50,7 @@ public class LoginServlet extends HttpServlet {
                 HttpSession session=request.getSession();
                 System.out.println("session id-->"+session.getId());
                 session.setMaxInactiveInterval(10);
-
-
                 session.setAttribute("user",user);
-                System.out.println("user11:"+user);
                 request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request,response);
             }else{
                 request.setAttribute("message","Username or password Error!!!");
