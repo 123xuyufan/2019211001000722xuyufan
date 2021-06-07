@@ -3,12 +3,9 @@ package com.xuyufan.controller;
 import com.xuyufan.dao.UserDao;
 import com.xuyufan.model.User;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -48,7 +45,7 @@ public class UpdateUserServlet extends HttpServlet {
                     HttpSession session=request.getSession();
                     session.setMaxInactiveInterval(10);
                     session.setAttribute("user",user1);
-                    request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request, response);
+                    request.getRequestDispatcher("accountDetails").forward(request, response);
                 }
             } catch (SQLException throwable) {
                 throwable.printStackTrace();
