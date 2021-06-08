@@ -3,61 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <!--add code about servlet -->
-    <!--<servlet>
-        <servlet-name>anyName</servlet-name>
-        <servlet-class>com.xuyufan.week2.demo.HelloWorldservlet</servlet-class>
-    </servlet>-->
+
+
+
     <servlet>
-        <servlet-name>LifeCycleServlet</servlet-name>
-        <servlet-class>com.xuyufan.week3.demo.LifeCycleServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>SearchServlet</servlet-name>
-        <servlet-class>com.xuyufan.week6.demo.SearchServlet</servlet-class>
-    </servlet>
-    <servlet>
-    <servlet-name>safety</servlet-name>
-    <jsp-file>/week2/register.jsp</jsp-file>
+        <servlet-name>safety</servlet-name>
+        <jsp-file>/week2/register.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>safety</servlet-name>
         <url-pattern>/week2/register.jsp</url-pattern>
     </servlet-mapping>
-    <!--automatic code-->
-    <!--<servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>com.xuyuafn.week3.demo.RegisterServlet</servlet-class>
-    </servlet>-->
-    <!--<servlet>
-        <servlet-name>ConfigDemoServlet</servlet-name>
-        <servlet-class>com.xuyufan.week4.demo.ConfigDemoServlet</servlet-class>
-    </servlet>-->
 
-    <!--<servlet-mapping>
-        <servlet-name>anyName</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>-->
-    <servlet-mapping>
-        <servlet-name>LifeCycleServlet</servlet-name>
-        <url-pattern>/Life</url-pattern>
-        <!--/Life ==LifeCycleServlet==com.xuyufan.week3.demo.LifeCycleServlet-->
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SearchServlet</servlet-name>
-        <url-pattern>/search</url-pattern>
-    </servlet-mapping>
-    <!--<servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/register</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ConfigDemoServlet</servlet-name>
-        <url-pattern>/config</url-pattern>
-    </servlet-mapping>-->
-    <!-- x=5,a=x so we can say a=5
-    so /hello==com.xuyufan.week2.demo.HelloWorldservlet
-    -->
+
+
     <context-param>
         <param-name>driver</param-name>
         <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
@@ -75,7 +34,19 @@
         <param-value>123456</param-value>
     </context-param>
 
+
+
     <welcome-file-list>
         <welcome-file>home</welcome-file>
     </welcome-file-list>
+
+    <filter>
+        <filter-name>YourNameFilter</filter-name>
+        <filter-class>com.lab2.YourNameFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>YourNameFilter</filter-name>
+        <url-pattern>/lab2/welcome.jsp</url-pattern>
+        <url-pattern>/lab2/validation.jsp</url-pattern>
+    </filter-mapping>
 </web-app>
