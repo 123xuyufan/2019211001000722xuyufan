@@ -49,7 +49,7 @@
 					</tr></thead>
 					<tbody>
 					<c:choose>
-						<c:when test="${ empty requestScope.orderList}">
+						<c:when test="${ empty orderList}">
 							<tr><td colspan="6">
 								<div class="content-404 text-center">
 									<img src="<%=basePath %>images/cart/no_order.png" class="img-responsive" alt="" />
@@ -60,11 +60,11 @@
 						</c:when>
 						<c:otherwise>
 							<!-- loop_start -->
-							<c:forEach var="o" items="${requestScope.orderList}">
+							<c:forEach var="o" items="${orderList}">
 								<tr>
 									<td>OID:${o.orderId}</td>
 									<td>${o.orderDate}</td>
-									<td><p>${o.firstName} ${o.lastName}</p>
+									<td><${o.firstName} ${o.lastName}</p>
 										<p> ${o.address1}</p>
 										<p>${o.address2}</p>
 										<p>${o.city},${o.state},${o.country}-${o.postalCode}</p>
@@ -106,7 +106,7 @@
 
 
 		</div>
-	</div></section> <!--/#cart_items-->
+</section> <!--/#cart_items-->
 
 <div id="popup_box">    <!-- OUR PopupBox DIV-->
 
